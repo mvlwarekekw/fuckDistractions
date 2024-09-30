@@ -23,7 +23,18 @@
       "js": ["scripts/blockyt.js"],
       "matches": [
         "https://www.youtube.com/shorts/*",
-        "https://www.tiktok.com/*",
+        "https://www.instagram.com/*"
+      ]
+    },
+    {
+      "js": ["scripts/blocktiktok.js"],
+      "matches": [
+        "https://www.tiktok.com/*"
+      ]
+    },
+    {
+      "js": ["scripts/blockinsta.js"],
+      "matches": [
         "https://www.instagram.com/*"
       ]
     }
