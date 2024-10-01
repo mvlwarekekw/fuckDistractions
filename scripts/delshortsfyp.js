@@ -4,8 +4,10 @@ const yt_homepage_block = () => {
         console.log(shelves)
         console.log(shelves.length)
         for (let i = 0, len = shelves.length, text = ""; i < len; i++) {
-            if (shelves.item(i).id === "dismissible") {
-                shelves.item(i).innerHTML = ""
+            if (shelves.item(i).hasAttribute("id")){
+                if (shelves.item(i).id === "dismissible") {
+                    shelves.item(i).innerHTML = ""
+                }
             }
         }
     }
