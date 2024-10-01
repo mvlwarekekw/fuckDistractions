@@ -3,7 +3,7 @@
   "description": "Blocks all types of distractions while coding",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "webNavigation"],
   "action": {
     "default_popup": "./popup/gui.html",
     "default_icon": "./images/block.jpg"
@@ -24,6 +24,13 @@
       "run_at": "document_end",
       "matches": [
         "https://www.youtube.com/shorts/*"
+      ]
+    },
+    {
+      "js": ["scripts/delshortsfyp.js"],
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.youtube.com/*"
       ]
     },
     {
