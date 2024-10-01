@@ -1,10 +1,10 @@
-const shorts_container = document.querySelector("#shorts-container")
-
 const yt_html = `
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <h1 style="margin: 50px 0 20px; font-size: 50px; color: #ffffff">Fuck YouTube shorts :D</h1>
     <h2 style="font-size: 30px; color: #ffffff">Trust me, you're not going to find a solution to your problems here.</h2>
     <h2 style="font-size: 30px; color: #ffffff">THEY are the problem. </h2>
+    <h3 style="margin: 30px 0; font-size: 25px; color: #ffffff">Look at this seal instead (click it :>)</h3>
+    <a href="https://youtube.com/"><img src="https://www.mvlware.xyz/assets/seal-CNUIHOmm.png" alt="seal aka furball" style="border-radius: 100%; width: 45vh; height: 45vh;"/></a>
 </div>
 `
 
@@ -14,12 +14,20 @@ const yt_css = `
 #shorts-container {
     font-family: 'Poppins', sans-serif;
 }
-`
 
-if (shorts_container) {
-    shorts_container.innerHTML = yt_html
-
-    const yt_css_elm = document.createElement('style');
-    yt_css_elm.textContent = yt_css;
-    document.head.appendChild(yt_css_elm)
+#shorts-container h1, h2, h3 {
+    font-weight: 400;
 }
+`
+const yt_block = () => {
+    const shorts_container = document.querySelector("#shorts-container")
+    if (shorts_container) {
+        shorts_container.innerHTML = yt_html
+
+        const yt_css_elm = document.createElement('style');
+        yt_css_elm.textContent = yt_css;
+        document.head.appendChild(yt_css_elm)
+    }
+}
+
+yt_block()
