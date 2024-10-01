@@ -21,9 +21,9 @@
   "content_scripts": [
     {
       "js": ["scripts/blockyt.js"],
+      "run_at": "document_end",
       "matches": [
-        "https://www.youtube.com/shorts/*",
-        "https://www.instagram.com/*"
+        "https://www.youtube.com/shorts/*"
       ]
     },
     {
