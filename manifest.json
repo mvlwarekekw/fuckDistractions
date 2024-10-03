@@ -1,0 +1,34 @@
+{
+  "name": "Fuck Distractions",
+  "description": "Blocks all types of distractions while coding",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "webNavigation", "tabs"],
+  "action": {
+    "default_popup": "./popup/gui.html",
+    "default_icon": "./images/block.jpg"
+  },
+  "icons": {
+    "16": "images/block-16.png",
+    "32": "images/block-32.png",
+    "48": "images/block-48.png",
+    "64": "images/block-64.png",
+    "640": "images/block.jpg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["scripts/block.js"],
+      "css": ["scripts/block.css"],
+      "run_at": "document_end",
+      "matches": [
+        "https://www.youtube.com/shorts/*",
+        "https://www.tiktok.com/*",
+        "https://www.instagram.com/*"
+      ]
+    }
+  ]
+}
